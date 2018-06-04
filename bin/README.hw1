@@ -1,0 +1,45 @@
+Homework 1 autograder
+
+# Running
+
+To run the homework 1 autograder, issue the following command:
+
+$ bin/hw1grader host port server_exec tests_dir json_results
+
+* host: should always be "localhost"
+* port: should be a unique value not used by other students, between
+        1025 and 65535 (e.g., 5000)
+* server_exec: the path to your compiled code
+* tests_dir: the path to the directory with the test cases
+             (e.g., ${PUBLIC}/hw1/tests)
+* json_results: the name of a file that will contain a summary of the results
+
+# Example output
+
+$ bin/hw1grader localhost 5123 ./calcserver tests/ /tmp/out.json
+[==========] Running 8 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 8 tests from Homework1Test
+[ RUN      ] Homework1Test.ExactMatch1
+[       OK ] Homework1Test.ExactMatch1 (510 ms)
+[ RUN      ] Homework1Test.ExactMatch2
+[       OK ] Homework1Test.ExactMatch2 (507 ms)
+[ RUN      ] Homework1Test.ExactMatch3
+[       OK ] Homework1Test.ExactMatch3 (506 ms)
+[ RUN      ] Homework1Test.ExactMatch4
+[       OK ] Homework1Test.ExactMatch4 (541 ms)
+[ RUN      ] Homework1Test.ExactMatch5
+[       OK ] Homework1Test.ExactMatch5 (507 ms)
+[ RUN      ] Homework1Test.ExactMatch6
+[       OK ] Homework1Test.ExactMatch6 (507 ms)
+[ RUN      ] Homework1Test.ExactMatch7
+[       OK ] Homework1Test.ExactMatch7 (574 ms)
+[ RUN      ] Homework1Test.ExactMatch8
+[       OK ] Homework1Test.ExactMatch8 (733 ms)
+[----------] 8 tests from Homework1Test (4387 ms total)
+
+[----------] Global test environment tear-down
+[==========] 8 tests from 1 test case ran. (4388 ms total)
+[  PASSED  ] 8 tests.
+$
+
